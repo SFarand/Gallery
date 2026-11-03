@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0e5ec;
+}
+
+.wrapper {
+    display: flex;
+    gap: 40px;
+    height: 100vh;
+    padding: 3vh 30px;
+}
+
+.all-imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.all-imgs img {
+    width: 200px;
+    height: 15vh;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #e0e5ec;
+    box-shadow: 8px 8px 16px #a3b1c6,
+                -8px -8px 16px #ffffff;
+    transition: 0.3s;
+}
+
+.all-imgs img:hover {
+    transform: scale(1.03);
+}
+
+/* عکس انتخاب شده: حالت فرورفته */
+.all-imgs img.active {
+    box-shadow: inset 6px 6px 12px #a3b1c6,
+                inset -6px -6px 12px #ffffff;
+    transform: scale(1);
+}
+
+.current-place {
+    flex: 1;
+    position: relative;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: #e0e5ec;
+    box-shadow: 12px 12px 24px #a3b1c6,
+                -12px -12px 24px #ffffff;
+}
+
+.current-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 0.2s;
+}
